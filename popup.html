@@ -7,18 +7,19 @@
 <body>
 <!-- <body> -->
   <div class="topBar">
-    <button id="logIn"> Log in </button>
+    <button id="logIn"> Log In </button>
     <button id="logout"> Log Out </button>
     <form>
       <input id="search" placeholder="Search your list">
       <button id="go" type="submit"> Search </button>
     </form>
     <div style="display:inline-block; float:right">
-      <div id="listType" class="textDisplay"> </div>
-      <button id="toggle"> Toggle </button>
+      <button id="listType" class="textDisplay" title="Toggle"> </button>
     </div>
   </div>
-  <table id="display" class="table"> </table>
+  <div class="table-wrapper">
+    <table id="display" class="table">  </table>
+  </div>
   <!-- <img src="https://s3.anilist.co/media/anime/cover/small/nx97940-cmgkiM9APwu6.jpg" height="100" width="100"> -->
 <script src="popup.js"></script>
 </body>

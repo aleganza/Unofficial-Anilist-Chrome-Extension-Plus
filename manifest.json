@@ -1,7 +1,7 @@
 {
-    "name": "UNOFFICIAL Anilist Updater",
+    "name": "UNOFFICIAL Anilist Updater Plus",
     "description": "Update Anilists in your browser",
-    "version": "0.1",
+    "version": "1.0",
     "permissions": ["storage", "identity"],
     "browser_action": {
         "default_icon": {

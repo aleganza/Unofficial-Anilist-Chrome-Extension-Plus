@@ -165,7 +165,7 @@ function updateImages() {
     let mediaList = displayedList[i];
 
     let imgHtmlString = `<img `;
-    imgHtmlString += `id="mediaList-${mediaList.id}" `;
+    imgHtmlString += `id="mediaList-${mediaList.id}" class="mediaList" `;
     imgHtmlString += `height="${thumbHeight}px" `;
     imgHtmlString += `width="${thumbWidth}px" `;
     imgHtmlString += `src="${mediaList.media.coverImage.medium}" `;
@@ -173,7 +173,7 @@ function updateImages() {
     imgHtmlString += `>`;
 
     let decrement = `<button `;
-    decrement += `id="dec-${mediaList.id}" `;
+    decrement += `id="dec-${mediaList.id}" class="updateElement"`;
     decrement += `style="float: left" `;
     decrement += `height="${1}" `;
     decrement += `width="${1}" `;
@@ -189,12 +189,12 @@ function updateImages() {
     }
 
     let text = `<span `;
-    text += `id="prog-${mediaList.id}"`;
+    text += `id="prog-${mediaList.id}" class="updateElement"`;
     text += `>`;
     text += `${mediaList.progress}/${totalEpisodes || '?'}`;
     text += `</span>`;
     let increment = `<button `;
-    increment += `id="inc-${mediaList.id}" `;
+    increment += `id="inc-${mediaList.id}" class="updateElement"`;
     increment += `style="float: right" `;
     increment += `height="${1}" `;
     increment += `width="${1}" `;
@@ -288,7 +288,7 @@ function searchList(e) {
   }
 }
 
-var toggle = doc.getElementById("toggle");
+var toggle = doc.getElementById("listType");
 toggle.addEventListener('click', toggleList);
 
 var searchInput = doc.getElementById("search");
@@ -313,3 +313,4 @@ storage.get([NAMESPACES.token, NAMESPACES.userId, NAMESPACES.type], async functi
   }
   refreshList();
 });
+
