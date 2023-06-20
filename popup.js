@@ -273,7 +273,7 @@ async function toggleList() {
 
 function searchList(e) {
   e.preventDefault();
-  let query = searchInput.value;
+  let query = searchButton.value;
   if (query) {
     query = query.toUpperCase();
     displayedList = fullList.filter(function(mediaList) {
@@ -291,9 +291,8 @@ function searchList(e) {
 var toggle = doc.getElementById("listType");
 toggle.addEventListener('click', toggleList);
 
-var searchInput = doc.getElementById("search");
-var searchButton = doc.getElementById("go");
-searchButton.addEventListener('click', searchList);
+var searchButton = doc.getElementById("search");
+searchButton.addEventListener('input', searchList);
 
 storage.get([NAMESPACES.token, NAMESPACES.userId, NAMESPACES.type], async function(result) {
   if (result.type) {
