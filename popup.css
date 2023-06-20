@@ -1,42 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-  --barBg: #152232;
-  --tableBg: #0B1622;
+  --bg: #151F2E;
   --font-primary: #A0B1C5;
   --font-secondary: #e0e8f1;
   --weight: 500;
+  --border-radius: 3px;
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--font-primary);
+  font-size: 14px;
 
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input#search {
   background-color: var(--font-primary);
-  color: var(--barBg);
+  color: var(--bg);
   font-weight: var(--weight);
   outline: none;
   border: none;
-  border-radius: 3px;
+  border-radius: var(--border-radius);
 }
 
 input#search::placeholder {
-  color: var(--barBg);
+  color: var(--bg);
 }
 
 button {
   cursor: pointer;
   font-weight: var(--weight);
-  /* background-color: var(--tableBg); */
   background-color: transparent;
   outline: none;
   border: none;
+  border-radius: var(--border-radius);
   transition: 0.2s;
 }
 
@@ -46,19 +47,15 @@ button:hover {
 
 body {
   vertical-align: middle;
-  background-color: var(--barBg);
+  background-color: var(--bg);
   width: 420px;
-  /* height: 500px; */
 }
 
 .cell {
   display: table-cell;
-  height: 120px;
+  height: 140px;
   width: 100px;
-  border: 3px solid var(--barBg);
-  /* border: 3px solid red; */
-  border-radius: 10px;
-  /* overflow: hidden; */
+  border: 3px solid var(--bg);
 }
 
 img {
@@ -78,15 +75,22 @@ table {
 .centerText {
   font-weight: var(--weight);
   width: 100px;
-  padding-top: 3px;
+  padding-top: 1.5px;
   text-align: center;
   position: absolute;
-  transform: translate(0px, -22px);
-  background-color: #15223296;
+  transform: translate(0px, -19px);
+  background-color: #152232ab;
 }
 
-.updateElement {
+.updateElement,
+.progressElement {
   color: var(--font-secondary);
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.updateElement:hover {
+  transform: translate(0, -1px);
 }
 
 /* .cell:hover {
@@ -94,7 +98,7 @@ table {
 } */
 
 .mediaList {
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   position: relative;
   transition: 0.2s;
 }

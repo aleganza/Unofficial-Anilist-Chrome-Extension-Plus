@@ -1,3 +1,5 @@
+document.getElementById("search").focus();
+
 var doc = document;
 var storage = chrome.storage.local;
 const NAMESPACES = {
@@ -24,7 +26,7 @@ var displayedList = [];
 var displayedType = "ANIME";
 var display = doc.getElementById("display");
 const COLUMNS = 4;
-const thumbHeight = 130;
+const thumbHeight = 140;
 const thumbWidth = 100;
 
 var logIn = doc.getElementById("logIn");
@@ -189,7 +191,7 @@ function updateImages() {
     }
 
     let text = `<span `;
-    text += `id="prog-${mediaList.id}" class="updateElement"`;
+    text += `id="prog-${mediaList.id}" class="progressElement"`;
     text += `>`;
     text += `${mediaList.progress}/${totalEpisodes || '?'}`;
     text += `</span>`;
