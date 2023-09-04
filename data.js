@@ -1,4 +1,4 @@
 var clientData = {
-  "clientId": "12152"
+  "clientId": ""
 }
 /* YOUR CLIENT ID HERE */
