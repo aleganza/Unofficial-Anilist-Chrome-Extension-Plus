@@ -101,7 +101,18 @@ async function getWatching() {
     type = "ANIME";
     format = "episodes";
   }
-  query = `
+  query =     let query = `
+      mutation ($id: Int, $progress: Int) {
+        SaveMediaListEntry (id: $id, progress: $progress) {
+          id
+          progress
+        }
+      }
+    `;
+    let variables = {
+      "id": mediaList.id,
+      "progress": progress
+    };`
     query($userId : Int) {
       MediaListCollection(userId : $userId, type:${type}, status : CURRENT, sort: UPDATED_TIME) {
         lists {

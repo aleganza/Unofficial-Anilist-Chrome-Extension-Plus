@@ -19,16 +19,16 @@
 }
 
 input#search {
+  padding-left: 5px;
   background-color: var(--font-primary);
   color: var(--bg);
-  font-weight: var(--weight);
   outline: none;
   border: none;
   border-radius: var(--border-radius);
 }
 
 input#search::placeholder {
-  color: var(--bg);
+  color: #4d545e;
 }
 
 button {
